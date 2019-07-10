@@ -5,7 +5,7 @@ export const act = {
     return "hello"
   },
   select(html) {
-    document.querySelector(html)
+    return document.querySelector(html)
   },
   render(container, component) {
     document.querySelector(container).innerHTML = component

@@ -1,16 +1,29 @@
 console.log("api loaded")
 
 export const API = {
-  get() {
-    return "get"
+  get(resource) {
+    return fetch(`http://localhost:8088/${resource}`).then(res => res.json())
   },
-  post() {
-    return "post"
+  post(resource, data) {
+    return fetch(`http://localhost:8088/${resource}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    }).then(res => res.json())
   },
-  put() {
-    return "put"
+
+  delete(resource, id) {
+    return fetch(`http://localhost:8088/${resource}/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" }
+    }).then(res => res.json())
   },
-  del() {
-    return "del"
+
+  edit(resource, id, data) {
+    return fetch(`http://localhost:8088/${resource}/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    }).then(res => res.json())
   }
 }
