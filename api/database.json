@@ -1,24 +1,61 @@
 {
-  "posts": [
+  "places": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Italy",
+      "visa_required": false
     },
     {
       "id": 2,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Switzerland",
+      "visa_required": true
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 3,
+      "name": "France",
+      "visa_required": false
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "interests": [
+    {
+      "name": "Local Market",
+      "placeId": "2",
+      "discription": "undefined",
+      "cost": "0",
+      "review": "",
+      "id": 1
+    },
+    {
+      "placeId": 1,
+      "name": "edit",
+      "discription": "some",
+      "cost": "values",
+      "review": "man",
+      "id": 4
+    },
+    {
+      "placeId": 2,
+      "name": "what",
+      "discription": "happens",
+      "cost": "here",
+      "review": "test",
+      "id": 5
+    },
+    {
+      "placeId": 3,
+      "name": "what",
+      "discription": "is ",
+      "cost": "this",
+      "review": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "placeId": "1",
+      "discription": "",
+      "cost": "",
+      "review": "",
+      "id": 7
+    }
+  ]
 }
